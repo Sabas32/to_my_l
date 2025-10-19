@@ -349,6 +349,16 @@ function balasWa() {
   window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
 }
 
+// Preloader
+const preloader = document.querySelector(".preloader");
+const main_content = document.querySelector(".main_content");
+window.addEventListener("load", () => {
+  preloader.classList.add("disapear");
+  main_content.classList.add("appear");
+  main_content.classList.remove("disapear");
+  console.log("Done.....");
+});
+
 const date_pass = document.getElementById("date_pass");
 const startButton = document.getElementById("start_btn");
 const hal1_1 = document.querySelector("#hal1.kotak1");

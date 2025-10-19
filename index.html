@@ -19,94 +19,108 @@
   </head>
   <body>
     <audio src="sangelbaby3.mp3" id="linkmp3"></audio>
-
+    <div class="preloader">
+      <div class="creative-preloader">
+        <div class="center">
+          <div class="spinner">
+            <div class="blob top"></div>
+            <div class="blob bottom"></div>
+            <div class="blob left"></div>
+            <div class="blob move-blob"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div
       class="background-overlay"
       data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsOhJrSDLjYoVvzWl_1aZtqnw-Xgd6yALV-5OK0AxYHhkTB_BttocjSoNya_XxaC-CPPl1C1OrvABOaSHLzWaYs4GKxUe9UWr3dH4xpI09cEOKMYrYCx813XimY0sHH1hdgz41_Z4xWhcdJK2qeIyX8QBvjrf5x-0ZJqeghO3ZyRNomQzSrvScel8GQO7Z/s1600/1000359042.jpg"
     ></div>
 
-    <!-- Form for entering pass -->
-    <div id="hal1" class="kotak halst kotak1">
-      <div id="stiker1" class="stiker">
-        <img src="./assets/pusn3.gif" />
+    <section class='main_content disapear'>
+      <!-- Form for entering pass -->
+      <div id="hal1" class="kotak halst kotak1">
+        <div id="stiker1" class="stiker">
+          <img src="./assets/pusn3.gif" />
+        </div>
+        <p>Enter Pass</p>
+        <input
+          type="text"
+          id="date_pass"
+          placeholder="eg. 10thDecember2005"
+          id="date_pass"
+        />
+        <br />
+        <p>Hint: The day of the first "K"</p>
+        <div class="tombol">
+          <button onclick="start_fn()">Start</button>
+        </div>
       </div>
-      <p>Enter Pass</p>
-      <input
-        type="text"
-        id="date_pass"
-        placeholder="eg. 10thDecember2005"
-        id="date_pass"
-      />
-      <br />
-      <p>Hint: The day of the first "K"</p>
-      <div class="tombol">
-        <button onclick="start_fn()">Start</button>
-      </div>
-    </div>
 
-    <!-- Halaman 1: Permulaan -->
-    <div id="hal1" class="kotak kotak2">
-      <div id="stiker1" class="stiker">
-        <img src="./assets/pusn3.gif" />
+      <!-- Halaman 1: Permulaan -->
+      <div id="hal1" class="kotak kotak2">
+        <div id="stiker1" class="stiker">
+          <img src="./assets/pusn3.gif" />
+        </div>
+        <p style="font-size: 18px; font-weight: 700">Hello Arinda! 💐</p>
+        <div class="tombol">
+          <button onclick="pindahHal(2); remove_h2()">Start</button>
+        </div>
       </div>
-      <p style="font-size: 18px; font-weight: 700">Hello Arinda! 💐</p>
-      <div class="tombol">
-        <button onclick="pindahHal(2); remove_h2()">Start</button>
-      </div>
-    </div>
 
-    <!-- Halaman 2: Envelope -->
-    <div id="hal2" class="sembunyi">
-      <div class="envlope-wrapper">
-        <div id="envelope" class="close">
-          <div class="front flap"></div>
-          <div class="front pocket"></div>
-          <div class="letter">
-            <div class="letter-corner corner-tl"></div>
-            <div class="letter-corner corner-br"></div>
-            <div class="message">
-              <p>Hello You! 💐</p>
+      <!-- Halaman 2: Envelope -->
+      <div id="hal2" class="sembunyi">
+        <div class="envlope-wrapper">
+          <div id="envelope" class="close">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+              <div class="letter-corner corner-tl"></div>
+              <div class="letter-corner corner-br"></div>
+              <div class="message">
+                <p>Hello You! 💐</p>
+              </div>
+            </div>
+            <div class="hearts">
+              <div class="heart a1"></div>
+              <div class="heart a2"></div>
+              <div class="heart a3"></div>
+            </div>
+            <div class="sparkles">
+              <div class="sparkle s1"></div>
+              <div class="sparkle s2"></div>
+              <div class="sparkle s3"></div>
             </div>
           </div>
-          <div class="hearts">
-            <div class="heart a1"></div>
-            <div class="heart a2"></div>
-            <div class="heart a3"></div>
-          </div>
-          <div class="sparkles">
-            <div class="sparkle s1"></div>
-            <div class="sparkle s2"></div>
-            <div class="sparkle s3"></div>
-          </div>
+        </div>
+        <div class="reset">
+          <button onclick="bukaEnvelope()">Open</button>
         </div>
       </div>
-      <div class="reset">
-        <button onclick="bukaEnvelope()">Open</button>
-      </div>
-    </div>
 
-    <!-- Halaman 3: Pesan Akhir -->
-    <div id="hal3" class="kotak sembunyi">
-      <canvas id="fireworks-canvas"></canvas>
-      <canvas id="game-canvas"></canvas>
-      <div id="stiker3" class="stiker">
-        <img id="stiker3a" src="./assets/pusn.gif" />
-        <img id="stiker3b" class="sembunyi" src="./assets/panah.gif" />
-        <img id="stiker3c" class="sembunyi" src="./assets/muah.gif" />
-      </div>
-      <div class="textOverlay">
-        <p id="teksAwalan"></p>
-        <p id="teksCinta"></p>
-        <p id="pesanAkhir"></p>
-        <p id="teksLucu"></p>
-        <div class="tombol to_folowers">
-          <a href="flowers.html">
-            <button onclick="">After reading click here</button>
-          </a>
+      <!-- Halaman 3: Pesan Akhir -->
+      <div id="hal3" class="kotak sembunyi">
+        <canvas id="fireworks-canvas"></canvas>
+        <canvas id="game-canvas"></canvas>
+        <div id="stiker3" class="stiker">
+          <img id="stiker3a" src="./assets/pusn.gif" />
+          <img id="stiker3b" class="sembunyi" src="./assets/panah.gif" />
+          <img id="stiker3c" class="sembunyi" src="./assets/muah.gif" />
         </div>
+        <div class="textOverlay">
+          <p id="teksAwalan"></p>
+          <p id="teksCinta"></p>
+          <p id="pesanAkhir"></p>
+          <p id="teksLucu"></p>
+          <div class="tombol to_folowers">
+            <a href="flowers.html">
+              <button onclick="">After reading click here</button>
+            </a>
+          </div>
+        </div>
+        <button id="tombolLanjut" onclick="nextHal3()">LesssGo</button>
       </div>
-      <button id="tombolLanjut" onclick="nextHal3()">LesssGo</button>
-    </div>
+    </section>
+
     <div class="tombol">
       <button onclick="balasWa()">Send</button>
     </div>
