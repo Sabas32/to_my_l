@@ -365,7 +365,7 @@ const hal1_1 = document.querySelector("#hal1.kotak1");
 const hal1_2 = document.querySelector("#hal1.kotak2");
 
 const start_fn = () => {
-  if (date_pass.value === "27thJuly2025") {
+  if (date_pass.value.toLowerCase() === "27thjuly2025") {
     // alert("Correct pass! Welcome!");
     hal1_1.style =
       "transform:scale(0) !important;opacity:0;transition:all .7s ease; display:none !important";
